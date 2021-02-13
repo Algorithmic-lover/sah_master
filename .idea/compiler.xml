@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sah-server" />
+        <module name="sah-generator" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="10">
+      <module name="sah" target="1.10" />
+      <module name="sah-generator" target="1.10" />
+      <module name="sah-server" target="1.10" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sah" options="-parameters" />
+      <module name="sah-generator" options="-parameters" />
+      <module name="sah-server" options="-parameters" />
+    </option>
+  </component>
+</project>

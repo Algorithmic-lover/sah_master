@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sah.iml" filepath="$PROJECT_DIR$/sah.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sah-generator/sah-generator.iml" filepath="$PROJECT_DIR$/sah-generator/sah-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sah-server/sah-server.iml" filepath="$PROJECT_DIR$/sah-server/sah-server.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,38 @@
+server:
+  port: 8181
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sah?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123
+
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #驼峰命名法
+#    database: mysql
+
+mybatis-plus:
+  #配置mapper映射文件
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  #配置Mybatis数据返回类型别名（默认别名是类名）
+  type-aliases-package: com.slx.server.pojo
+  configuration:
+#    log-impl:  org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+    # 是否开启自动驼峰命名规则（camel case）映射，即从经典数据库列名 A_COLUMN（下划线命名） 到经典 Java 属性名 aColumn（驼峰命名） 的类似映射
+    map-underscore-to-camel-case: false
+
+
+
+logging:
+  level:
+    com.slx.server.mapper: debug #mybatis sql打印（mapper接口所在的包）
+
+jwt:
+  tokenHeader: Authorization #存储的请求头，（key = Authorization）
+  secret: yep-secret #加密解密的密钥
+  expiration: 604800 #超期限时间,一天
+  tokenHead: Bearer #负载(claim)中拿到开头 (value=Bearer+jwt令牌)
